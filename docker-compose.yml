@@ -1,0 +1,32 @@
+
+# Note that mongo container is started before Orion, as Orion needs it
+# as dependency and reserve the order has been found problematic in some
+# low resource hosts
+version: "3"
+services:
+ mongodb:
+  image: mongo:4.1.13
+  hostname: mongo-db
+  container_name: db-mongo
+  ports:
+    - "27018:27018"
+  expose:
+    - 27018
+  command: --bind_ip_all
+
+ orion:
+  image: orion:2.2.0
+  hostname: orion
+  ports:
+    - "1026:1026"
+  depends_on:
+    - mongodb
+  expose:
+    - "1026"
+  links:
+    - mongodb
+
+  command: -dbhost mongodb  -logLevel DEBUG
+  healthcheck:
+      test: curl --fail -s http://orion:1026/version || exit 1
+

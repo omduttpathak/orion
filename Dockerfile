@@ -48,7 +48,7 @@ RUN \
     mv rapidjson-1.0.2/include/rapidjson/ /usr/local/include && \
     # Install orion from source
     git clone http://karun.singh:karun1997@192.168.100.178/csp_containerizationandautomation/orion.git && \
-    cd Orion && \
+    cd orion && \
     #git checkout ${GIT_REV_ORION} && \
     make && \
     make install && \

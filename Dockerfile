@@ -47,7 +47,7 @@ RUN \
     tar xfz v1.0.2.tar.gz && \
     mv rapidjson-1.0.2/include/rapidjson/ /usr/local/include && \
     # Install orion from source
-    git clone http://karun.singh:karun1997@192.168.100.178/csp_containerizationandautomation/orion.git && \
+    git clone http://fiware-csp-user:password@192.168.100.178/csp_containerizationandautomation/orion.git && \
     cd orion && \
     #git checkout ${GIT_REV_ORION} && \
     make && \

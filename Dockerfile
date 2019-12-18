@@ -5,6 +5,7 @@ ENV ORION_USER orion
 ENV GIT_REV_ORION 2.2.0
 ENV CLEAN_DEV_TOOLS 1
 
+COPY ./* /opt
 WORKDIR /opt
 
 RUN \
@@ -29,7 +30,8 @@ RUN \
       which \
       cyrus-sasl-devel && \
     # Install libmicrohttpd from source
-    curl -kOL http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.48.tar.gz && \
+    
+#    curl -kOL http://ftp.gnu.org/gnu/libmicrohttpd/libmicrohttpd-0.9.48.tar.gz && \
     tar xvf libmicrohttpd-0.9.48.tar.gz && \
     cd libmicrohttpd-0.9.48 && \
     ./configure --disable-messages --disable-postprocessor --disable-dauth && \
@@ -37,17 +39,17 @@ RUN \
     make install && \
     ldconfig && \
     # Install mongodb driver from source
-    curl -kOL https://github.com/mongodb/mongo-cxx-driver/archive/legacy-1.1.2.tar.gz && \
+#    curl -kOL https://github.com/mongodb/mongo-cxx-driver/archive/legacy-1.1.2.tar.gz && \
     tar xfz legacy-1.1.2.tar.gz && \
     cd mongo-cxx-driver-legacy-1.1.2 && \
     scons --use-sasl-client --ssl && \
     scons install --prefix=/usr/local --use-sasl-client --ssl && \
     # Install rapidjson from source
-    curl -kOL https://github.com/miloyip/rapidjson/archive/v1.0.2.tar.gz && \
+#    curl -kOL https://github.com/miloyip/rapidjson/archive/v1.0.2.tar.gz && \
     tar xfz v1.0.2.tar.gz && \
     mv rapidjson-1.0.2/include/rapidjson/ /usr/local/include && \
     # Install orion from source
-    git clone http://fiware-csp-user:password@192.168.100.178/csp_containerizationandautomation/orion.git && \
+#    git clone http://fiware-csp-user:password@192.168.100.178/csp_containerizationandautomation/orion.git && \
     cd orion && \
     #git checkout ${GIT_REV_ORION} && \
     make && \

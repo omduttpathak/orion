@@ -54,7 +54,7 @@ RUN \
     # Install orion from source
 #    git clone http://fiware-csp-user:password@192.168.100.178/csp_containerizationandautomation/orion.git && \
 #    cd orion && \
-#    mv  /opt/fiware-orion-release-2.2.0.zip /opt/libmicrohttpd-0.9.48/mongo-cxx-driver-legacy-1.1.2/ && \
+    mv  /opt/fiware-orion-release-2.2.0.zip /opt/libmicrohttpd-0.9.48/mongo-cxx-driver-legacy-1.1.2/ && \
     unzip fiware-orion-release-2.2.0.zip && \
     cd fiware-orion-release-2.2.0 && \
     #git checkout ${GIT_REV_ORION} && \

@@ -40,7 +40,7 @@ stages:
       path: service.yaml
   when:
     event: {}
-- name: IOT-Agernt_Test_Stage
+- name: Orion_Test_Stage
   steps:
   - runScriptConfig:
       image: python:latest

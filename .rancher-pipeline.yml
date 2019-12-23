@@ -2,7 +2,7 @@ stages:
 - name: build
   steps:
   - publishImageConfig:
-      dockerfilePath: docker/Dockerfile
+      dockerfilePath: ./Dockerfile
       buildContext: .
       tag: fiware-orion:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true

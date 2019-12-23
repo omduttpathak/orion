@@ -5,7 +5,7 @@ ENV ORION_USER orion
 ENV GIT_REV_ORION 2.2.0
 ENV CLEAN_DEV_TOOLS 1
 
-COPY ./* /opt
+COPY ./* /opt/
 WORKDIR /opt
 
 RUN \

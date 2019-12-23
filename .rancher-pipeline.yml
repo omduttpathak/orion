@@ -32,117 +32,26 @@ stages:
     when:
       branch: {}
       event: {}
-  when:
-    event: {}
-- name: Test_postman
-  steps:
-  - applyYamlConfig:
-      path: Postman/Postman.yaml
-    when:
-      branch:
-        include:
-        - master
-      event:
-        include:
-        - pull_request
-        - push
-  - runScriptConfig:
-      image: python:latest
-      shellScript: "apt-get update\napt-get install sshpass \n\n\n\n\n\n\n\n\n\nsshpass
-        -p mehant ssh -tt -o StrictHostKeyChecking=no mehant@192.168.100.178 << EOF\n\n\n\ndir=`pwd`\n\necho
-        \"Dir = ${dir}\"\n\npod_name=`kubectl --kubeconfig=config-176 get pods -n
-        updateandrollback |grep \"api-test\" |cut -d \" \" -f1|head -n1`\n\necho \"Pod
-        anme = ${pod_name}\"\n\n\nEOF\n\n\n"
-    when:
-      branch:
-        include:
-        - master
-      event:
-        include:
-        - pull_request
-        - push
-  when:
-    event: {}
-- name: demo_test
-  steps:
-  - runScriptConfig:
-      image: python:latest
-      shellScript: echo "hello world"
-    when:
-      branch:
-        include:
-        - master
-      event:
-        include:
-        - pull_request
-        - push
-  when:
-    event: {}
-- name: jmeter
-  steps:
-  - runScriptConfig:
-      image: python:latest
-      shellScript: "apt-get update\n#sleep 60\n\napt-get install sshpass\n#sleep 60\n\n\n#Script
-        created to launch Jmeter tests directly from the current terminal without
-        accessing the jmeter master pod.\n#It requires that you supply the path to
-        the jmx file\n#After execution, test script jmx file may be deleted from the
-        pod itself but not locally.\n\nsshpass -p mehant ssh -tt -o StrictHostKeyChecking=no
-        mehant@192.168.100.178 <<EOF\n\n#ls;\n#working_dir=\"`pwd`\"\n\n#Get namesapce
-        variable\n#tenant=`awk '{print $NF}' \"$working_dir/tenant_export\"`\n#tenent=\"jmeter\"\n#echo
-        \"*** PWD ***\"\n#echo \"`pwd`\"\n\n#jmx=\"/home/mehant/Orion-new.jmx\"\n#if
-        [ -n \"$jmx\" ] \n#             read -p 'Enter path to the jmx file ' \n#fi\n\n#if
-        [ ! -f \"/home/mehant/Orion-new.jmx\" ];\n#then\n#    echo \"Test script file
-        was not found in PATH\"\n#    echo \"Kindly check and input the correct file
-        path\"\n#   exit\n#fi\n\n#test_name=\"$(basename \"$jmx\")\"\n\n#Get Master
-        pod details\n\n#master_pod=`kubectl --kubeconfig=config-176 get po -n jmeter
-        | grep jmeter-master | awk '{print \\$1}'`\n\nkubectl --kubeconfig=config-176
-        exec -ti -n jmeter jmeter-master-7774f59cb4-9xqfk -- /bin/bash  /jmeter/apache-jmeter-5.0/bin/jmeter
-        -n -t /jmeter/apache-jmeter-5.0/bin/Orion-new_test.jmx\n "
-    when:
-      branch:
-        include:
-        - master
-      event:
-        include:
-        - push
-        - pull_request
-  when:
-    event: {}
-- name: testing pipeline fail
-  steps:
-  - runScriptConfig:
-      image: python:latest
-      shellScript: |-
-        echo "Hi"
-        exit 1
-    when:
-      branch:
-        include:
-        - master
-      event:
-        include:
-        - pull_request
-        - push
-  when:
-    event: {}
-- name: test2
-  steps:
-  - runScriptConfig:
-      image: python:latest
-      shellScript: echo "Hi"
-    when:
-      branch:
-        include:
-        - master
-      event:
-        include:
-        - pull_request
-        - push
 - name: deploy
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
   - applyYamlConfig:
       path: service.yaml
+  when:
+    event: {}
+- name: IOT-Agernt_Test_Stage
+  steps:
+  - runScriptConfig:
+      image: python:latest
+      shellScript: |+
+        apt-get update
+        echo Y | apt-get install npm
+        npm -v
+        npm install -g newman
+        newman run http://192.168.100.178/csp_containerizationandautomation/orion/raw/master/Context_State_in_Orion.postman_collection.json
+  when:
+    branch: {}
+    event: {}
 timeout: 60
 notification: {}

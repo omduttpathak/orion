@@ -12,13 +12,8 @@ stages:
       PLUGIN_INSECURE: "true"
       PLUGIN_STORAGE_PATH: /var/lib/docker2
     when:
-      branch:
-        include:
-        - master
-      event:
-        include:
-        - pull_request
-        - push
+      branch: {}
+      event: {}
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
@@ -40,11 +35,11 @@ stages:
       path: service.yaml
   when:
     event: {}
-- name: Orion_Test_Stage
+- name: test
   steps:
   - runScriptConfig:
       image: python:latest
-      shellScript: |+
+      shellScript: |
         apt-get update
         echo Y | apt-get install npm
         npm -v

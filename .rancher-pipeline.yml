@@ -34,9 +34,9 @@ stages:
 - name: deploy
   steps:
   - applyYamlConfig:
-      path: ./deployment.yaml
+      path: ./orion_deployment.yaml
   - applyYamlConfig:
-      path: ./service.yaml
+      path: ./orion_service.yml
   - runScriptConfig:
       image: python:latest
       shellScript: |-

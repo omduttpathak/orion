@@ -25,20 +25,6 @@ stages:
       path: ./orion_deployment.yaml
   - applyYamlConfig:
       path: ./orion_service.yml
-  - runScriptConfig:
-      image: python:latest
-      shellScript: |-
-        apt-get update
-        apt-get install sshpass
-        sshpass -p password ssh -tt -o StrictHostKeyChecking=no newuser@192.168.100.178 ./check_pod_status.sh p-kpggk-pipeline orion
-    when:
-      branch:
-        include:
-        - master
-      event:
-        include:
-        - pull_request
-        - push
   when:
     event: {}
 - name: test

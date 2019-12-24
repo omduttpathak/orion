@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: IMG_fiware-orion_v2.2.0:${CICD_EXECUTION_SEQUENCE}
+      tag: orion-devops-image
       registry: 192.168.100.176
     env:
       PLUGIN_DEBUG: "true"
@@ -24,8 +24,13 @@ stages:
       PLUGIN_INSECURE: "true"
       PLUGIN_STORAGE_PATH: /var/lib/docker2
     when:
-      branch: {}
-      event: {}
+      branch:
+        include:
+        - master
+      event:
+        include:
+        - push
+        - pull_request
 - name: deploy
   steps:
   - applyYamlConfig:

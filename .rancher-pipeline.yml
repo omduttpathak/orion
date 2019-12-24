@@ -5,18 +5,6 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: img_fiware-orion_v2.2.0:${CICD_EXECUTION_SEQUENCE}
-      registry: 192.168.100.176
-    env:
-      PLUGIN_DEBUG: "true"
-      PLUGIN_INSECURE: "true"
-      PLUGIN_STORAGE_PATH: /var/lib/docker2
-    when:
-      branch: {}
-      event: {}
-  - publishImageConfig:
-      dockerfilePath: ./Dockerfile
-      buildContext: .
-      tag: orion-devoperation
       pushRemote: true
       registry: 192.168.100.176:5000
     env:
@@ -24,13 +12,8 @@ stages:
       PLUGIN_INSECURE: "true"
       PLUGIN_STORAGE_PATH: /var/lib/docker2
     when:
-      branch:
-        include:
-        - master
-      event:
-        include:
-        - push
-        - pull_request
+      branch: {}
+      event: {}
 - name: deploy
   steps:
   - applyYamlConfig:

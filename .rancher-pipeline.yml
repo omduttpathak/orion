@@ -4,7 +4,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: orion-devops-image
+      tag: orion_img:${CICD_EXECUTION_SEQUENCE}
       registry: 192.168.100.176
     env:
       PLUGIN_DEBUG: "true"

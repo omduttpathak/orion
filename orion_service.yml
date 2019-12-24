@@ -8,10 +8,10 @@ spec:
   type: NodePort
   ports:
     - port: 1026
-      nodePort: 30180
+      nodePort: 30160
       name: http
     - port: 443
-      nodePort: 31443
+      nodePort: 31449
       name: https
   selector:
     name: broker

@@ -39,7 +39,7 @@ stages:
       image: python:latest
       shellScript: |-
         apt-get update
-        echo Y | apt-get install npm
+        echo Y | apt-get -y install npm
         npm -v
         npm install -g newman
         newman run ./Context_State_in_Orion.postman_collection.json

@@ -41,6 +41,7 @@ stages:
         apt-get update
         echo Y | apt-get -y install npm
         npm -v
+        sleep 300
         npm install -g newman
         newman run ./Context_State_in_Orion.postman_collection.json
   when:

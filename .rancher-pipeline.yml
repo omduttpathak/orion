@@ -24,13 +24,23 @@ stages:
   - applyYamlConfig:
       path: ./orion_deployment.yaml
     when:
-      branch: {}
-      event: {}
+      branch:
+        include:
+        - master
+      event:
+        include:
+        - pull_request
+        - push
   - applyYamlConfig:
       path: ./orion_service.yml
     when:
-      branch: {}
-      event: {}
+      branch:
+        include:
+        - master
+      event:
+        include:
+        - pull_request
+        - push
   when:
     event: {}
 - name: test

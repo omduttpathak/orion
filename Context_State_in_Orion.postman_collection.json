@@ -42,7 +42,7 @@
 					"raw": "{\n    \"diviceName\": \"FIXED READER\",\n    \"locationType\":\"O\",\n    \"locationTypeId\":\"10\",\n    \"locationName\":\"Noida\",\n    \"locationId\":\"0003\",\n    \"deviceType\":\"FR\",\n    \"deviceMacId\":\"84:24:8D:EE:2F:D2\"\n}"
 				},
 				"url": {
-					"raw": "http://192.168.100.178:30181/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
+					"raw": "http://192.168.100.117:31444/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
 					"protocol": "http",
 					"host": [
 						"192",
@@ -98,13 +98,13 @@
 					}
 				],
 				"url": {
-					"raw": "http://192.168.100.178:31444/v2/entities?options=keyValues&id=FldbEntity1",
+					"raw": "http://192.168.100.117:31444/v2/entities?options=keyValues&id=FldbEntity1",
 					"protocol": "http",
 					"host": [
 						"192",
 						"168",
 						"100",
-						"178"
+						"117"
 					],
 					"port": "31444",
 					"path": [
@@ -162,15 +162,15 @@
 					"raw": "{\n    \"diviceName\": \"FIXED READER\",\n    \"locationType\":\"O\",\n    \"locationTypeId\":\"10\",\n    \"locationName\":\"Noida\",\n    \"locationId\":\"0003\",\n    \"deviceType\":\"FR\",\n    \"deviceMacId\":\"84:24:8D:EE:2F:D2\"\n}"
 				},
 				"url": {
-					"raw": "http://192.168.100.178:30181/iot/json?i=fixeddevice3&k=4jggokgpepnvsb2uv4s40d59oa",
+					"raw": "http://192.168.100.117:31444/iot/json?i=fixeddevice3&k=4jggokgpepnvsb2uv4s40d59oa",
 					"protocol": "http",
 					"host": [
 						"192",
 						"168",
 						"100",
-						"178"
+						"117"
 					],
-					"port": "30181",
+					"port": "31444",
 					"path": [
 						"iot",
 						"json"
@@ -226,15 +226,15 @@
 					"raw": "{\n    \"diviceName\": \"FIXED READER\",\n    \"locationType\":\"O\",\n    \"locationTypeId\":\"10\",\n    \"locationName\":\"Noida\",\n    \"locationId\":\"0003\",\n    \"deviceType\":\"FR\",\n    \"deviceMacId\":\"84:24:8D:EE:2F:D2\"\n}"
 				},
 				"url": {
-					"raw": "http://192.168.100.178:30181/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59",
+					"raw": "http://192.168.100.117:31444/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59",
 					"protocol": "http",
 					"host": [
 						"192",
 						"168",
 						"100",
-						"178"
+						"117"
 					],
-					"port": "30181",
+					"port": "31444",
 					"path": [
 						"iot",
 						"json"
@@ -290,15 +290,15 @@
 					"raw": "{\n    \"diviceName\": \"FIXED READER\",\n    \"locationType\":\"O\",\n    \"locationTypeId\":\"10\",\n    \"locationName\":\"Noida\",\n    \"locationId\":\"0003\",\n    \"deviceType\":\"FR\",\n    \"deviceMacId\":\"84:24:8D:EE:2F:D2\"\n}"
 				},
 				"url": {
-					"raw": "http://192.168.100.178:30181/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
+					"raw": "http://192.168.100.117:31444/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
 					"protocol": "http",
 					"host": [
 						"192",
 						"168",
 						"100",
-						"178"
+						"117"
 					],
-					"port": "30181",
+					"port": "31444",
 					"path": [
 						"iot",
 						"json"
@@ -354,15 +354,15 @@
 					"raw": "{\n    \"diviceName\": \"FIXED READER\",\n    \"locationType\":\"O\",\n    \"locationTypeId\":\"10\",\n    \"locationName\":\"Noida\",\n    \"locationId\":\"0003\",\n    \"deviceType\":\"FR\",\n    \"deviceMacId\":\"84:24:8D:EE:2F:D2\"\n}"
 				},
 				"url": {
-					"raw": "http://192.168.100.178:30181/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
+					"raw": "http://192.168.100.117:31444/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
 					"protocol": "http",
 					"host": [
 						"192",
 						"168",
 						"100",
-						"178"
+						"117"
 					],
-					"port": "30181",
+					"port": "31444",
 					"path": [
 						"iot",
 						"json"
@@ -418,13 +418,13 @@
 					"raw": "{\n    \"diviceName\": \"FIXED READER\",\n    \"locationType\":\"O\",\n    \"locationTypeId\":\"10\",\n    \"locationName\":\"Noida\",\n    \"locationId\":\"0003\",\n    \"deviceType\":\"FR\",\n    \"deviceMacId\":\"84:24:8D:EE:2F:D2\"\n}"
 				},
 				"url": {
-					"raw": "http://192.168.100.178:31444/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
+					"raw": "http://192.168.100.117:31444/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
 					"protocol": "http",
 					"host": [
 						"192",
 						"168",
 						"100",
-						"178"
+						"117"
 					],
 					"port": "31444",
 					"path": [
@@ -482,13 +482,13 @@
 					"raw": "{\n    \"diviceName\": \"FIXED READER\",\n    \"locationType\":\"O\",\n    \"locationTypeId\":\"10\",\n    \"locationName\":\"Noida\",\n    \"locationId\":\"0003\",\n    \"deviceType\":\"FR\",\n    \"deviceMacId\":\"84:24:8D:EE:2F:D2\"\n}"
 				},
 				"url": {
-					"raw": "http://192.168.100.178:31444/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
+					"raw": "http://192.168.100.117:31444/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
 					"protocol": "http",
 					"host": [
 						"192",
 						"168",
 						"100",
-						"178"
+						"117"
 					],
 					"port": "31444",
 					"path": [
@@ -546,13 +546,13 @@
 					"raw": "{\n    \"diviceName\": \"FIXED READER\",\n    \"locationType\":\"O\",\n    \"locationTypeId\":\"10\",\n    \"locationName\":\"Noida\",\n    \"locationId\":\"0003\",\n    \"deviceType\":\"FR\",\n    \"deviceMacId\":\"84:24:8D:EE:2F:D2\"\n}"
 				},
 				"url": {
-					"raw": "http://192.168.100.178:31444/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
+					"raw": "http://192.168.100.117:31444/iot/json?i=fixeddevice&k=4jggokgpepnvsb2uv4s40d59oa",
 					"protocol": "http",
 					"host": [
 						"192",
 						"168",
 						"100",
-						"178"
+						"117"
 					],
 					"port": "31444",
 					"path": [

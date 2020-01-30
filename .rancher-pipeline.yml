@@ -6,7 +6,6 @@ stages:
       buildContext: .
       tag: img_fiware-orion_v2.2.0:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      #registry ip changed
       registry: 172.30.76.49:5000
     env:
       PLUGIN_DEBUG: "true"
